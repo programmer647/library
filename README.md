@@ -15,3 +15,8 @@ Page needs to
 - "borrow" book
 - admin reports- overdue books - who has borrowed what
 - anything else you think might be useful
+
+
+tables I will need
+tblusers (userID,username,surname,forename,password,role) (role will be either admin or user)
+tblbooks (bookID,title,author,fiction/non fiction) (possibly add other fields like genres later on)
