@@ -13,9 +13,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     if(password_verify($attempt, $hashed)){
         //header('Location: users.php');
         $_SESSION['name']=$row['Surname'];
-        echo("qqqq");
+        echo("Logged in");
+        header('Location:home-page.html');
     }else{
-        echo("SDES");
+        echo("Incorrect password");
         //header('Location: login.php');
     }
 }

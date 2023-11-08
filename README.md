@@ -19,4 +19,4 @@ Page needs to
 
 tables I will need
 tblusers (userID,username,surname,forename,password,role) (role will be either admin or user but add teacher as well as they might be able to borrow different books, or create reading lists for pupils)
-tblbooks (bookID,title,author,fiction/non fiction) (possibly add other fields like genres later on)
+tblbooks (bookID,title,author first name, author surname) (possibly add other fields like genres later on)
