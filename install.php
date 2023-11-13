@@ -35,4 +35,15 @@ $stmt->execute();
 $stmt->closeCursor();
 
 
+$stmt=$conn->prepare("DROP TABLE IF EXISTS Tblloans;
+CREATE TABLE Tblloans
+(UserID INT(4) NOT NULL,
+IBSN INT(14) NOT NULL,
+Date_loaned DATE() NOT NULL,
+Date_due DATE() NOT NULL)");
+$stmt->execute();
+$stmt->closeCursor();
+
+
+
 ?>
