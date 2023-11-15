@@ -1,14 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Page title</title>
+    
+</head>
+<body>
+<form action="loan.php" method="post">
+<select name = "book">
 <?php
-
 include_once('connection.php');
-echo("</br>");
+$stmt = $conn->prepare("SELECT * FROM Tblbooks ORDER BY Title ASC");
+$stmt->execute();
 
-$stmt=$conn ->prepare("SELECT * FROM tblbooks");
-$stmt ->execute();
 
-while ($row = $stmt ->fetch(PDO::FETCH_ASSOC))
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
-    echo($row["Title"].' '.$row["Author_firstname"].' '.$row["Author_surname"]."</br>");
+	echo('<option value='.$row["IBSN"].'>'.$row["Title"].', '.$row["Author_firstname"].', '.$row["Author_surname"].'</option>');
 }
-
 ?>
+
+</select>
+
+
+
+  <input type="submit" value="Loan">
+  
+</form>
+
+
+       
+</body>
+</html>

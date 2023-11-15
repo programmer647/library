@@ -33,14 +33,15 @@ Author_firstname VARCHAR(20) NOT NULL,
 Author_surname VARCHAR(20) NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
+// add number of copies on loan and number of copies in the library
 
 
 $stmt=$conn->prepare("DROP TABLE IF EXISTS Tblloans;
 CREATE TABLE Tblloans
 (UserID INT(4) NOT NULL,
 IBSN INT(14) NOT NULL,
-Date_loaned DATE() NOT NULL,
-Date_due DATE() NOT NULL)");
+Date_loaned DATE NOT NULL,
+Date_due DATE NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 
