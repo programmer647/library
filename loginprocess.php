@@ -12,7 +12,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     $attempt= $_POST['Pword'];
     if(password_verify($attempt, $hashed)){
         //header('Location: users.php');
-        $_SESSION['name']=$row['username'];
+        $_SESSION['name']=$row['Username'];
+        $_SESSION['role']=$row['Role'];
         echo("Logged in");
         header('Location:home-page.html');
     }else{
