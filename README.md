@@ -20,3 +20,19 @@ Page needs to
 tables I will need
 tblusers (userID,username,surname,forename,password,role) (role will be either admin or user but add teacher as well as they might be able to borrow different books, or create reading lists for pupils)
 tblbooks (bookID,title,author first name, author surname) (possibly add other fields like genres later on)
+
+
+
+Currently doing:
+Collect books page so that students can collect books they have reserved
+
+
+Next steps:
+
+
+Notes:
+make it so you can't reserve unless a book is in the library
+
+
+other things I could add
+make a way to alert a user when a book they want is back in 

@@ -35,6 +35,7 @@ if ($_SESSION['role']!=2)
             <li><a href="#">View overdue books</a></li>
             <li><a href="viewusers.php">View users</a></li>
             <li><a href="#">Loan books to students</a></li>
+            <li><a href="#">Collect reserved books</a></li>
 
             <li><a href="#">Page 3</a></li>
           </ul>

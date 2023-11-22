@@ -14,6 +14,7 @@ $stmt->bindParam(':UserID', $_SESSION['name']);
 $stmt->bindParam(':IBSN', $_POST["IBSN"]);
 $stmt->bindParam(':Date_loaned', .date("Y/m/d").)
 
+
 $stmt->execute();
 $conn=null;
 

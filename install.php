@@ -34,6 +34,13 @@ Author_firstname VARCHAR(20) NOT NULL,
 Author_surname VARCHAR(20) NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
+$stmt = $conn->prepare("INSERT INTO Tblbooks(ISBN,Title,Author_firstname,Author_surname)VALUES
+(345243,'test','test','test')
+");
+$stmt->execute();
+$stmt->closeCursor();
+
+
 // add number of copies on loan and number of copies in the library
 
 
@@ -43,6 +50,14 @@ CREATE TABLE Tblloans
 IBSN INT(14) NOT NULL,
 Date_loaned DATE NOT NULL,
 Date_due DATE NOT NULL)");
+$stmt->execute();
+$stmt->closeCursor();
+
+$stmt=$conn->prepare("DROP TABLE IF EXISTS Tblreserve;
+CREATE TABLE Tblreserve
+(UserID INT(4) NOT NULL,
+IBSN INT(14) NOT NULL,
+Reserve_until DATE NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 

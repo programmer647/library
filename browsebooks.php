@@ -25,7 +25,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 
 
 
-  <input type="submit" value="Loan">
+  <input type="submit" value="Reserve">
   
 </form>
 
