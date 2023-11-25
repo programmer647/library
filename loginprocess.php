@@ -14,6 +14,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         //header('Location: users.php');
         $_SESSION['name']=$row['Username'];
         $_SESSION['role']=$row['Role'];
+        $_Session['id']=$row['UserID'];
         echo("Logged in");
         header('Location:home-page.html');
     }else{

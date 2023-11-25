@@ -7,7 +7,7 @@
     
 </head>
 <body>
-<form action="loan.php" method="post">
+<form action="reserve.php" method="post">
 <select name = "book">
 <?php
 include_once('connection.php');
@@ -17,7 +17,7 @@ $stmt->execute();
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
-	echo('<option value='.$row["IBSN"].'>'.$row["Title"].', '.$row["Author_firstname"].', '.$row["Author_surname"].'</option>');
+	echo('<option value='.$row["ISBN"].'>'.$row["Title"].', '.$row["Author_firstname"].', '.$row["Author_surname"].'</option>');
 }
 ?>
 

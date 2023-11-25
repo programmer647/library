@@ -25,6 +25,7 @@ tblbooks (bookID,title,author first name, author surname) (possibly add other fi
 
 Currently doing:
 Collect books page so that students can collect books they have reserved
+finish date on date reserve as it is currently giving an error
 
 
 Next steps:
