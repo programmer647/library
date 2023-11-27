@@ -25,7 +25,7 @@ tblbooks (bookID,title,author first name, author surname) (possibly add other fi
 
 Currently doing:
 Collect books page so that students can collect books they have reserved
-finish date on date reserve as it is currently giving an error
+creating a cron job which will update the reserve table every set amount of time - using mysql scheduling instead. Have created the process but don't know if it has worked yet
 
 
 Next steps:

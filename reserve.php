@@ -9,7 +9,7 @@ echo("Reserved");
 print_r($_POST);
 print_r($_SESSION);
 $date = date('Y-m-d');
-$newdate = date('Y-m-d', strtotime($date.' + 40 days'));
+$newdate = date('Y-m-d', strtotime($date.' + 1 days'));
 echo "today is: $date";
 echo "<br> and after 5 days is: $newdate";
 echo("<br>");
