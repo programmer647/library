@@ -14,9 +14,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
         //header('Location: users.php');
         $_SESSION['name']=$row['Username'];
         $_SESSION['role']=$row['Role'];
-        $_Session['id']=$row['UserID'];
+        $_SESSION['id']=$row['UserID'];
         echo("Logged in");
-        header('Location:home-page.html');
+        print_r($_SESSION);
+       # header('Location:home-page.html');
     }else{
         echo("Incorrect password");
         //header('Location: login.php');
