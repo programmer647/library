@@ -22,17 +22,18 @@ if ($_SESSION['role']!=2)
     
 </head>
 <body>
-<form action=".php" method="post">
+<form action="loan.php" method="post">
 <select name = "items">
 <?php
 include_once('connection.php');
-$stmt = $conn->prepare("SELECT * FROM Tblreserve ORDER BY Reserve_until ASC");
+$stmt = $conn->prepare("SELECT * FROM Tblreserve WHERE UserID= $_SESSION['id'] ORDER BY Reserve_until ASC");
 $stmt->execute();
+
 
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
-	echo('<option value='.$row["UserID"].'>'.$row["IBSN"].', '.$row["Reserve_until"].'</option>');
+	echo('<option value='.$row['IBSN']'>'.$row["IBSN"].'</option>');
 }
 ?>
 </select>

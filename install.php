@@ -55,7 +55,8 @@ $stmt->closeCursor();
 
 $stmt=$conn->prepare("DROP TABLE IF EXISTS Tblreserve;
 CREATE TABLE Tblreserve
-(UserID INT(4) NOT NULL,
+(ReserveID INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+UserID INT(4) NOT NULL,
 IBSN INT(14) NOT NULL,
 Reserve_until DATE NOT NULL)");
 $stmt->execute();

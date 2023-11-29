@@ -25,10 +25,11 @@ tblbooks (bookID,title,author first name, author surname) (possibly add other fi
 
 Currently doing:
 Collect books page so that students can collect books they have reserved
-creating a cron job which will update the reserve table every set amount of time - using mysql scheduling instead. Have created the process but don't know if it has worked yet
+add reserve id so there is a primary key
 
 
 Next steps:
+create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
 
 
 Notes:
