@@ -24,11 +24,13 @@ tblbooks (bookID,title,author first name, author surname) (possibly add other fi
 
 
 Currently doing:
-Collect books page so that students can collect books they have reserved
+Collect books page so that students can collect books they have reserved - this is currently showing an error - ask cunniffe for help - adding a reserve id might fix the problem so do that first
 add reserve id so there is a primary key
 
 
+
 Next steps:
+way to loan books
 create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
 
 
