@@ -7,6 +7,15 @@
     
 </head>
 <body>
+<for action="search.php">
+  Search for:<input type="text" name="item"><br>
+  <input type="radio" name="type" value="title" checked> Title<br>
+  <input type="radio" name="type" value="author_surname"> Author surname<br>
+  <input type="radio" name="type" value="author_firstname"> Author first name<br>
+  <input type="submit" value="Search">
+
+
+
 <form action="reserve.php" method="post">
 <select name = "book">
 <?php
