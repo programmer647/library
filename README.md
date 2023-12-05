@@ -21,17 +21,20 @@ tables I will need
 tblusers (userID,username,surname,forename,password,role) (role will be either admin or user but add teacher as well as they might be able to borrow different books, or create reading lists for pupils)
 tblbooks (bookID,title,author first name, author surname) (possibly add other fields like genres later on)
 
+Done
+Add reserve id
 
 
 Currently doing:
-Collect books page so that students can collect books they have reserved - this is currently showing an error - ask cunniffe for help - adding a reserve id might fix the problem so do that first
-add reserve id so there is a primary key
+Collect books page so that students can collect books they have reserved - this is currently showing an error - ask cunniffe for help 
+
 
 
 
 Next steps:
 way to loan books
 create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
+see if the username can be the primary key if a method is put in to ensure there are no repeated usernames
 
 
 Notes:
