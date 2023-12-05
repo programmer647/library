@@ -15,11 +15,12 @@ echo("<br>");
 
 
 
-$stmt = $conn->prepare("INSERT INTO Tblloans (UserID,ISBN,Date_loaned)VALUES (:UserID,:ISBN,:Date_loaned)");
+$stmt = $conn->prepare("INSERT INTO Tblloans (UserID,ISBN,Date_loaned,Date_due)VALUES (:UserID,:ISBN,:Date_loaned,:Date_due)");
 
 $stmt->bindParam(':UserID', $_POST['userid']);
 $stmt->bindParam(':ISBN', $_POST["isbn"]);
 $stmt->bindParam(':Date_loaned', $date);
+$stmt->bindParam(':Date_due',$newdate);
 
 
 $stmt->execute();

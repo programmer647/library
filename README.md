@@ -27,6 +27,7 @@ Add reserve id
 
 Currently doing:
 Collect books page so that students can collect books they have reserved - this is currently showing an error - ask cunniffe for help 
+add date due to loan page
 
 
 
@@ -35,6 +36,7 @@ Next steps:
 way to loan books
 create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
 see if the username can be the primary key if a method is put in to ensure there are no repeated usernames
+better way to loan books eg searching by book and user
 
 
 Notes:
