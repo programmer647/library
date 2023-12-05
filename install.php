@@ -46,7 +46,8 @@ $stmt->closeCursor();
 
 $stmt=$conn->prepare("DROP TABLE IF EXISTS Tblloans;
 CREATE TABLE Tblloans
-(UserID INT(4) NOT NULL,
+(LoanID INT(5) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+UserID INT(4) NOT NULL,
 ISBN INT(14) NOT NULL,
 Date_loaned DATE NOT NULL,
 Date_due DATE NOT NULL)");
