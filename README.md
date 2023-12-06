@@ -29,8 +29,9 @@ way to loan books
 
 
 Currently doing:
-Collect books page so that students can collect books they have reserved - this is currently showing an error - ask cunniffe for help 
 search mechanism on browsebooks page - do it by title, author. for now do this so that it redirects you onto another page where the results are but later change this so it does it on the page. have a radio button to select what to search by
+finish collect page so that it sends the right data to the loan page
+add a boolean value to the loan table to see if it is overdue or not
 
 
 
@@ -44,6 +45,8 @@ better way to loan books eg searching by book and user
 make way to validate items for loan eg check if they are in the books and users table
 way for admin to view overdue books
 way for admin to view all books currently out of the library
+make it so that collecting a book removes it from the reserve table
+figure out how to do it that when collecting books it shows the title of the book and the author, as well as the user's name instead of just their user id
 
 
 Notes:

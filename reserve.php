@@ -17,10 +17,10 @@ echo("<br>");
 print_r($_SESSION);
 
 
-$stmt = $conn->prepare("INSERT INTO Tblreserve (UserID,IBSN,Reserve_until)VALUES (:UserID,:IBSN,:Reserve_until)");
+$stmt = $conn->prepare("INSERT INTO Tblreserve (UserID,IBSN,Reserve_until)VALUES (:UserID,:ISBN,:Reserve_until)");
 
 $stmt->bindParam(':UserID', $_SESSION['id']);
-$stmt->bindParam(':IBSN', $_POST["book"]);
+$stmt->bindParam(':ISBN', $_POST["book"]);
 $stmt->bindParam(':Reserve_until', $newdate);
 
 $stmt->execute();
