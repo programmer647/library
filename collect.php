@@ -27,10 +27,15 @@ if ($_SESSION['role']!=2)
 <?php
 include_once('connection.php');
 
-$stmt = $conn->prepare("SELECT tblbooks.title as sn FROM Tblreserve 
+$stmt = $conn->prepare("SELECT tblbooks.title as t, tblreserve.IBSN as ISBN, tblreserve.UserID as id FROM Tblreserve 
 INNER JOIN tblbooks 
-ON tblbooks.ISBN=tblreserve.IBSN") ;
+ON tblbooks.ISBN=tblreserve.IBSN
+INNER JOIN tblusers 
+ON tblusers.userID=tblreserve.UserID") ;
 $stmt->execute();
+
+
+
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {

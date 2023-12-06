@@ -26,15 +26,14 @@ Add reserve id
 add date due to loan page
 add loanid
 way to loan books
-
-
-Currently doing:
-search mechanism on browsebooks page - do it by title, author. for now do this so that it redirects you onto another page where the results are but later change this so it does it on the page. have a radio button to select what to search by
-finish collect page so that it sends the right data to the loan page
 add a boolean value to the loan table to see if it is overdue or not
 
 
 
+Currently doing:
+search mechanism on browsebooks page - do it by title, author. for now do this so that it redirects you onto another page where the results are but later change this so it does it on the page. have a radio button to select what to search by
+finish collect page by making the drop down menu that shows the username, book title, book author and sends the right data to the loan page
+finish overdue books page 
 
 
 
