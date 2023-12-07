@@ -17,7 +17,7 @@ echo("<br>");
 print_r($_SESSION);
 
 
-$stmt = $conn->prepare("INSERT INTO Tblreserve (UserID,IBSN,Reserve_until)VALUES (:UserID,:ISBN,:Reserve_until)");
+$stmt = $conn->prepare("INSERT INTO Tblreserve (UserID,ISBN,Reserve_until)VALUES (:UserID,:ISBN,:Reserve_until)");
 
 $stmt->bindParam(':UserID', $_SESSION['id']);
 $stmt->bindParam(':ISBN', $_POST["book"]);

@@ -22,25 +22,23 @@ if ($_SESSION['role']!=2)
     
 </head>
 <body>
-<!-- <form action="loanbook.php" method="post">
-<select name = "items"> -->
+<form action="loanbook.php" method="post">
+<select name = "items"> 
 <?php
 include_once('connection.php');
 
-$stmt = $conn->prepare("SELECT tblbooks.title as t, tblreserve.IBSN as ISBN, tblreserve.UserID as id FROM Tblreserve 
+$stmt = $conn->prepare("SELECT tblbooks.title as t, tblreserve.ISBN as ISBN, tblreserve.UserID as id FROM Tblreserve 
 INNER JOIN tblbooks 
-ON tblbooks.ISBN=tblreserve.IBSN
+ON tblbooks.ISBN=tblreserve.ISBN
 INNER JOIN tblusers 
 ON tblusers.userID=tblreserve.UserID") ;
 $stmt->execute();
 
 
-
-
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
     print_r($row);
-	#echo('<option value='.$row['ReserveID'].'>'.$row['IBSN']'.$row['sn']</option>');
+	echo('<option value='.$row['id'].'>'.$row['ISBN']'.$row['sn']</option>');
 }
 ?>
 

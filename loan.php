@@ -14,8 +14,5 @@
   <input type="submit" value="Loan book">
 </form>
 
-
-
-
 </body>
 </html>

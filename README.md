@@ -31,9 +31,12 @@ add a boolean value to the loan table to see if it is overdue or not
 
 
 Currently doing:
-search mechanism on browsebooks page - do it by title, author. for now do this so that it redirects you onto another page where the results are but later change this so it does it on the page. have a radio button to select what to search by
-finish collect page by making the drop down menu that shows the username, book title, book author and sends the right data to the loan page
-finish overdue books page 
+1. finish collect page by making the drop down menu that shows the username, book title, book author and sends the right data to the loan page
+figure out how to do it that when collecting books it shows the title of the book and the author, as well as the user's name instead of just their user id
+
+2. search mechanism on browsebooks page - do it by title, author. for now do this so that it redirects you onto another page where the results are but later change this so it does it on the page. have a radio button to select what to search by
+
+3. finish overdue books page 
 
 
 
@@ -45,7 +48,13 @@ make way to validate items for loan eg check if they are in the books and users 
 way for admin to view overdue books
 way for admin to view all books currently out of the library
 make it so that collecting a book removes it from the reserve table
-figure out how to do it that when collecting books it shows the title of the book and the author, as well as the user's name instead of just their user id
+
+
+add copies and on_loan to books database then do that if it isn't in the library you can't loan it. also add to the reserves page that you can be notified when it comes back into the library
+
+
+add headers to all pages to redirect if either not logged in or don't have the right role to access a page
+remove printing arrays at the beginning of pages
 
 
 Notes:
