@@ -23,11 +23,11 @@ if ($_SESSION['role']!=2)
 </head>
 <body>
 <form action="loanbook.php" method="post">
-<select name = "items"> 
+<select name = "items">
 <?php
 include_once('connection.php');
 
-$stmt = $conn->prepare("SELECT tblbooks.title as t, tblreserve.ISBN as ISBN, tblreserve.UserID as id FROM Tblreserve 
+$stmt = $conn->prepare("SELECT tblbooks.title as t, tblreserve.ISBN as ISBN, tblreserve.UserID as userid FROM Tblreserve 
 INNER JOIN tblbooks 
 ON tblbooks.ISBN=tblreserve.ISBN
 INNER JOIN tblusers 
@@ -38,13 +38,13 @@ $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
     print_r($row);
-	echo('<option value='.$row['id'].'>'.$row['ISBN']'.$row['sn']</option>');
+	echo('<option value='.$row['userid'].$row['ISBN'].'>'.$row['t'].'</option>');
 }
 ?>
 
 
 
-</select>
+</select> 
 
 
   <input type="submit" value="Loan">

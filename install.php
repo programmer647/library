@@ -50,8 +50,8 @@ CREATE TABLE Tblloans
 UserID INT(4) NOT NULL,
 ISBN INT(14) NOT NULL,
 Date_loaned DATE NOT NULL,
-Date_due DATE NOT NULL
-Overdue BOOLEAN)");
+Date_due DATE NOT NULL,
+Overdue BOOLEAN NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 

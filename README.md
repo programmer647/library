@@ -31,6 +31,9 @@ add a boolean value to the loan table to see if it is overdue or not
 
 
 Currently doing:
+fix why the collect page isn't transferring to the loan page correctly 
+
+ask mr cunniffe about wh yit isn't printing the variable and if that means the code isn't working to join the two tables
 1. finish collect page by making the drop down menu that shows the username, book title, book author and sends the right data to the loan page
 figure out how to do it that when collecting books it shows the title of the book and the author, as well as the user's name instead of just their user id
 

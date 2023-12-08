@@ -7,7 +7,7 @@ $stmt->execute();
 
 while ($row = $stmt ->fetch(PDO::FETCH_ASSOC))
 {
-    echo($row["UserID"].' '.$row["ISBN"].' '.$row["Date_loaned"].$row["date_due"].</br>");
+    echo($row["UserID"].' '.$row["ISBN"].' '.$row["Date_loaned"]' '.$row["date_due"]."</br>");
 }
 
 
