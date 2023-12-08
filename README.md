@@ -31,7 +31,10 @@ add a boolean value to the loan table to see if it is overdue or not
 
 
 Currently doing:
-fix why the collect page isn't transferring to the loan page correctly 
+finish search page - copy the code from the tutorial on the website
+
+
+fix why the collect page isn't transferring to the loan page correctly
 finish the loanfromcollect page so that collected books can be loaned
 
 

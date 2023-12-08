@@ -7,14 +7,26 @@
     
 </head>
 <body>
-<for action="search.php">
-  Search for:<input type="text" name="item"><br>
-  <input type="radio" name="type" value="title" checked> Title<br>
+<form action="search.php" method="post">
+  Search for:<input type="text" name="search" placeholder="search..." required><br>
+  <!-- <input type="radio" name="type" value="title" checked> Title<br>
   <input type="radio" name="type" value="author_surname"> Author surname<br>
-  <input type="radio" name="type" value="author_firstname"> Author first name<br>
+  <input type="radio" name="type" value="author_firstname"> Author first name<br> -->
   <input type="submit" value="Search">
 
 </form>
+
+<?php
+
+if(isset($_POST['search'])){
+  require "search.php";
+  if (count($results)>0){
+    foreach($results as $r){
+      echo"<div>".$r['title']."-".$r['author_firstname']."</div>";
+    }}else echo "No results found";
+    }
+
+?>
 
 <form action="reserve.php" method="post">
 <select name = "book">
