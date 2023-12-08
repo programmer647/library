@@ -32,8 +32,9 @@ add a boolean value to the loan table to see if it is overdue or not
 
 Currently doing:
 fix why the collect page isn't transferring to the loan page correctly 
+finish the loanfromcollect page so that collected books can be loaned
 
-ask mr cunniffe about wh yit isn't printing the variable and if that means the code isn't working to join the two tables
+
 1. finish collect page by making the drop down menu that shows the username, book title, book author and sends the right data to the loan page
 figure out how to do it that when collecting books it shows the title of the book and the author, as well as the user's name instead of just their user id
 
@@ -44,6 +45,7 @@ figure out how to do it that when collecting books it shows the title of the boo
 
 
 Next steps:
+write checkoverdue page that will run every time an admin logs onto the website
 create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
 see if the username can be the primary key if a method is put in to ensure there are no repeated usernames
 better way to loan books eg searching by book and user
@@ -66,3 +68,6 @@ make it so you can't reserve/loan unless a book is in the library
 
 other things I could add
 make a way to alert a user when a book they want is back in 
+
+stuff to ask for help on:
+SQL statement in collectfromreserve page

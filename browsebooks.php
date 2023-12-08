@@ -14,7 +14,7 @@
   <input type="radio" name="type" value="author_firstname"> Author first name<br>
   <input type="submit" value="Search">
 
-
+</form>
 
 <form action="reserve.php" method="post">
 <select name = "book">
