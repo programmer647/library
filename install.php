@@ -35,7 +35,9 @@ Author_surname VARCHAR(20) NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 $stmt = $conn->prepare("INSERT INTO Tblbooks(ISBN,Title,Author_firstname,Author_surname)VALUES
-(345243,'test','test','test')
+(345243,'test','test','test'),
+(457289,'Divergent','Veronica ','Roth'),
+(654839,'The Hunger Games','Suzanne','Collins')
 ");
 $stmt->execute();
 $stmt->closeCursor();

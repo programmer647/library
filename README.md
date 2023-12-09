@@ -27,12 +27,11 @@ add date due to loan page
 add loanid
 way to loan books
 add a boolean value to the loan table to see if it is overdue or not
+finish search page
 
 
 
 Currently doing:
-finish search page - copy the code from the tutorial on the website
-
 
 fix why the collect page isn't transferring to the loan page correctly
 finish the loanfromcollect page so that collected books can be loaned
@@ -56,6 +55,7 @@ make way to validate items for loan eg check if they are in the books and users 
 way for admin to view overdue books
 way for admin to view all books currently out of the library
 make it so that collecting a book removes it from the reserve table
+improve search mechanism
 
 
 add copies and on_loan to books database then do that if it isn't in the library you can't loan it. also add to the reserves page that you can be notified when it comes back into the library
