@@ -66,6 +66,15 @@ Reserve_until DATE NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 
+$stmt = $conn->prepare("INSERT INTO Tblreserve(ReserveID,UserID,ISBN,Reserve_until)VALUES
+(NULL,2,326419),
+(NULL,1,7658439),
+(NULL,3,34178,)
+");
+$stmt->execute();
+$stmt->closeCursor();
+
+
 
 
 ?>

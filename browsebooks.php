@@ -6,49 +6,27 @@
     <title>Page title</title>
     
 </head>
-<body>
-<form method="post" action="browsebooks.php">
-  Search for:<input type="text" name="search" placeholder="search..." required><br>
-  <!-- <input type="radio" name="type" value="title" checked> Title<br>
-  <input type="radio" name="type" value="author_surname"> Author surname<br>
-  <input type="radio" name="type" value="author_firstname"> Author first name<br> -->
-  <input type="submit" value="Search">
 
-</form>
-
-       
-</body>
 </html>
-
-
-<?php
-
-if(isset($_POST['search'])){
-  require "search.php";
-  if (count($results)>0){
-    foreach($results as $r){
-      printf("<div>%s - %s</div>",$r['title'],$r['author_firstname']);
-    }}else {echo "No results found";
-    }
-
-?>
-
-<!-- <form action="reserve.php" method="post">
+<body>
+<form action="reserve.php" method="post">
 <select name = "book">
+<?php
+ include_once('connection.php');
+ $stmt = $conn->prepare("SELECT * FROM Tblbooks ORDER BY Title ASC");
+ $stmt->execute();
 
-// include_once('connection.php');
-// $stmt = $conn->prepare("SELECT * FROM Tblbooks ORDER BY Title ASC");
-// $stmt->execute();
 
-
-// while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-// {
-// 	echo('<option value='.$row["ISBN"].'>'.$row["Title"].', '.$row["Author_firstname"].', '.$row["Author_surname"].'</option>');
-// }
+ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+ {
+ 	echo('<option value='.$row["ISBN"].'>'.$row["Title"].', '.$row["Author_firstname"].', '.$row["Author_surname"].'</option>');
+ }
 ?>
 
 </select>
 
   <input type="submit" value="Reserve">
   
-</form> -->
+</form>
+
+</body>

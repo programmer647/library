@@ -8,7 +8,7 @@ echo("Loaned");
 print_r($_POST);
 
 $date = date('Y-m-d');
-$newdate = date('Y-m-d', strtotime($date.' + 1 days'));
+$newdate = date('Y-m-d', strtotime($date.' - 1 days'));
 echo "today is: $date";
 echo "<br> and after 5 days is: $newdate";
 echo("<br>");
