@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+
+</head>
+
 <body>
 
 <div class="dropdown">
@@ -18,7 +22,7 @@
 </div>
 </body>
 
-<form>
+<script>
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
@@ -39,6 +43,6 @@ function filterFunction() {
   }
 }
 
-</form>
+</script>
 
 </html>
