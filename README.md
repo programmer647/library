@@ -26,6 +26,7 @@ write checkoverdue page
 
 Currently doing:
 return books page
+do the join stuff so that the title and name can be displayed on the return books page
 
 
 
@@ -56,5 +57,6 @@ make it so you can't reserve/loan unless a book is in the library
 other things I could add
 make a way to alert a user when a book they want is back in 
 email reminders to people to return their books
+add a flag when a user returns a book if it is overdue so that they can be fined for it
 
 stuff to ask for help on:

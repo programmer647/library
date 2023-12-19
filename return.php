@@ -11,13 +11,18 @@
   <button onclick="myFunction()" class="dropbtn">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
     <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="#about">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
+    <?php
+    include_once("connection.php");
+    $stmt=$conn-> prepare("SELECT * FROM Tblloans");
+    $stmt->execute();
+
+    while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+    {
+      echo('<option value='.$row["LoanID"].'>'.$row["ISBN"].','.$row["UserID"]);
+    }
+
+
+?>
   </div>
 </div>
 </body>
