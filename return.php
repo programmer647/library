@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	$connect = new mysqli("localhost", "root", "", "test")  or die(mysqli_error());
+	$connect = new mysqli("localhost", "root", "", "library")  or die(mysqli_error());
 ?>
 <html lang = "eng">
 	<head>
@@ -12,16 +12,16 @@
 <body>
 	<center>
 		<h1>Chosen.js</h1>
-		<form action="test.php" method="post">
+		<form action="returnprocess.php" method="post">
 			<select name="book" class = "chosen-select" > 
 				<?php
 				include_once("connection.php");
-				$stmt = $conn->prepare("SELECT * FROM name");
+				$stmt = $conn->prepare("SELECT * FROM tblloans");
 				$stmt->execute();
 	
 					while($row = $stmt->fetch(PDO::FETCH_ASSOC))
 					{
-					echo('<option value ='.$row['id'].'>'.$row['id'].', '.$row['name'].'</option>');
+					echo('<option value ='.$row['LoanID'].'>'.$row['LoanID'].', '.$row['UserID'].','.$row['ISBN'].', '.$row['Date_due'].'</option>');
 					}
 				?>
 			</select>

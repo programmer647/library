@@ -25,15 +25,13 @@ write checkoverdue page
 
 
 Currently doing:
-return books page
-modify code in testing folder so that it can be used on return page and other pages where needed
 do the join stuff so that the title and name can be displayed on the return books page
 
 
 
 Next steps:
 
-
+modify other pages to include better search that's used on return books page
 create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
 see if the username can be the primary key if a method is put in to ensure there are no repeated usernames
 better way to loan books eg searching by book and user
