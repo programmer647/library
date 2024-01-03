@@ -1,5 +1,7 @@
 <?php
 
+print_r($_POST);
+
 session_start();
 
 include_once("connection.php");
@@ -17,15 +19,15 @@ echo("<br>");
 
 $stmt = $conn->prepare("INSERT INTO Tblloans (UserID,ISBN,Date_loaned,Date_due)VALUES (:UserID,:ISBN,:Date_loaned,:Date_due)");
 
-$stmt->bindParam(':UserID', $_POST['userid']);
-$stmt->bindParam(':ISBN', $_POST["isbn"]);
+$stmt->bindParam(':UserID', $_POST['user']);
+$stmt->bindParam(':ISBN', $_POST["book"]);
 $stmt->bindParam(':Date_loaned', $date);
 $stmt->bindParam(':Date_due',$newdate);
 
 
 $stmt->execute();
-$conn=null;
+$conn=null; 
 
 
 
-?>
+?> 

@@ -13,19 +13,8 @@ Page needs to
 
 
 
-Done
-Add reserve id
-add date due to loan page
-add loanid
-way to loan books
-add a boolean value to the loan table to see if it is overdue or not
-finish search page
-finish overdue books page 
-write checkoverdue page
-
-
 Currently doing:
-do the join stuff so that the title and name can be displayed on the return books page
+change loan page so that you can only loan books that are in the library
 
 
 
