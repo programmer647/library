@@ -4,7 +4,6 @@ session_start();
 
 include_once("connection.php");
 
-//header("Refresh:2; url= pupildoessubject.php");
 echo("Reserved");
 print_r($_POST);
 print_r($_SESSION);
