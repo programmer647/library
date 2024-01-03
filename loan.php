@@ -11,7 +11,7 @@
 	</head>
 <body>
 		<h1>Chosen.js</h1>
-		<form action="returnprocess.php" method="post">
+		<form action="loanbook.php" method="post">
 			<select name="book" class = "chosen-select" > 
 				<?php
 				include_once("connection.php");
@@ -38,7 +38,7 @@
 				?>
         </select>
 
-				<input type="submit" value="Return">
+				<input type="submit" value="Loan">
 
 			</form>	
 </body>	

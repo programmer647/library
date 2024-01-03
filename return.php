@@ -16,7 +16,7 @@
 			<select name="book" class = "chosen-select" > 
 				<?php
 				include_once("connection.php");
-				$stmt = $conn->prepare("SELECT tblloans.Loanid as loanid, tblbooks.Title as t, tblbooks.Author_firstname as auf, tblbooks.Author_surname as aus, tblusers.Forename as f, tblusers.Surname as s FROM Tblloans 
+				$stmt = $conn->prepare("SELECT tblloans.LoanID as loanid, tblbooks.Title as t, tblbooks.Author_firstname as auf, tblbooks.Author_surname as aus, tblusers.Forename as f, tblusers.Surname as s FROM Tblloans 
 INNER JOIN tblbooks 
 ON tblbooks.ISBN=tblloans.ISBN
 INNER JOIN tblusers 
