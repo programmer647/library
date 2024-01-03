@@ -15,14 +15,7 @@
 </form>
 
 
-<script>
-function logged(){
-   alert('Logged in')
 
-}
-
-
-</script>
 
 </body>
 </html>

@@ -16,12 +16,16 @@
 			<select name="book" class = "chosen-select" > 
 				<?php
 				include_once("connection.php");
-				$stmt = $conn->prepare("SELECT * FROM tblloans");
-				$stmt->execute();
+				$stmt = $conn->prepare("SELECT tblloans.Loanid as loanid FROM Tblloans 
+INNER JOIN tblbooks 
+ON tblbooks.ISBN=tblloans.ISBN
+INNER JOIN tblusers 
+ON tblusers.UserID=tblloans.UserID") ;
+$stmt->execute();
 	
 					while($row = $stmt->fetch(PDO::FETCH_ASSOC))
 					{
-					echo('<option value ='.$row['LoanID'].'>'.$row['LoanID'].', '.$row['UserID'].','.$row['ISBN'].', '.$row['Date_due'].'</option>');
+					echo('<option value ='.$row['loanid'].'>'.$row['loanid'].', '.$row['UserID'].','.$row['ISBN'].', '.$row['Date_due'].'</option>');
 					}
 				?>
 			</select>
@@ -37,3 +41,11 @@
 	$('.chosen-select').chosen({width: "20%"});
 </script>
 </html>
+
+
+$stmt = $conn->prepare("SELECT tblreserve.ReserveID as reserveid, tblbooks.title as t, tblreserve.ISBN as ISBN, tblreserve.UserID as userid, tblusers.Forename as f, tblusers.Surname as s FROM Tblreserve 
+INNER JOIN tblbooks 
+ON tblbooks.ISBN=tblreserve.ISBN
+INNER JOIN tblusers 
+ON tblusers.userID=tblreserve.UserID") ;
+$stmt->execute();

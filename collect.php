@@ -27,7 +27,7 @@ if ($_SESSION['role']!=2)
 <?php
 include_once('connection.php');
 
-$stmt = $conn->prepare("SELECT tblreserve.ReserveID as reserveid, tblbooks.title as t, tblreserve.ISBN as ISBN, tblreserve.UserID as userid FROM Tblreserve 
+$stmt = $conn->prepare("SELECT tblreserve.ReserveID as reserveid, tblbooks.title as t, tblreserve.ISBN as ISBN, tblreserve.UserID as userid, tblusers.Forename as f, tblusers.Surname as s FROM Tblreserve 
 INNER JOIN tblbooks 
 ON tblbooks.ISBN=tblreserve.ISBN
 INNER JOIN tblusers 
@@ -38,10 +38,9 @@ $stmt->execute();
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 {
     //print_r($row);
-	echo('<option value='.$row['reserveid'].'>'.$row['t'].'</option>');
+	echo('<option value='.$row['reserveid'].'>'.$row['t'].', '.$row['f'].', '.$row['s'].'</option>');
 }
 ?>
-
 
 
 </select>

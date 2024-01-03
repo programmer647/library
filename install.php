@@ -17,8 +17,8 @@ $hashed_password = password_hash("password", PASSWORD_DEFAULT);
 $stmt = $conn->prepare("INSERT INTO Tblusers(UserID,Username,Surname,Forename,Password,Year,House,Role)VALUES
 (NULL,'Jsmith','Smith','John',:hp,10,'Laxton',0),
 (NULL,'Rcunniffe','Cunniffe','Robert',:hp,0,'St A',1),
-(NULL,'Hbass','Hector','Bass',:hp,12,'St A',0),
-(NULL, 'Sbourne','Sophie','Bourne',:hp,12,'Sadler',2)
+(NULL,'Hbass','Bass','Hector',:hp,12,'St A',0),
+(NULL, 'Sbourne','Bourne','Sophie',:hp,12,'Sadler',2)
 ");
 $stmt->bindParam(':hp', $hashed_password);
 $stmt->execute();
