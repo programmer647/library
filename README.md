@@ -18,8 +18,12 @@ Page needs to
 Currently doing:
 fix all pages that currently rely on old tblbooks structure
 These pages are:
-browse books
 collect
+overdue
+return
+search
+searchprocess
+viewloans
 
 
 Next steps:
