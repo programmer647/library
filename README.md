@@ -16,7 +16,10 @@ Page needs to
 
 
 Currently doing:
-create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
+fix all pages that currently rely on old tblbooks structure
+These pages are:
+browse books
+collect
 
 
 Next steps:
