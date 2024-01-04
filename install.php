@@ -66,6 +66,14 @@ Reserve_until DATE NOT NULL)");
 $stmt->execute();
 $stmt->closeCursor();
 
+$stmt=$conn->prepare("DROP TABLE IF EXISTS Tblauthors;
+CREATE TABLE Tblauthors
+(AuthorID INT(4) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+Author_firstname VARCHAR(20) NOT NULL,
+Author_surname VARCHAR(20) NOT NULL)");
+$stmt->execute();
+$stmt->closeCursor();
+
 
 
 
