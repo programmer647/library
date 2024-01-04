@@ -7,7 +7,7 @@ $stmt = $conn->prepare("SELECT LoanID as loanid, tblbooks.Title as t, tblusers.F
 INNER JOIN tblbooks 
 ON tblbooks.ISBN=tblloans.ISBN
 INNER JOIN tblusers 
-ON tblusers.UserID=tblloans.UserID where Overdue=True") ;
+ON tblusers.UserID=tblloans.UserID") ;
 $stmt->execute();
 
 print_r($row);

@@ -16,16 +16,19 @@ Page needs to
 
 
 Currently doing:
-improve overdue page so that it shows the book title and the name of the person who it is on loan to
-
+create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
 
 
 Next steps:
-
 modify other pages to include better search that's used on return books page
-create a table for authors so that there isn't repeated data in tblbooks. make it update automatically when adding books so that you don't have to add authors 
-see if the username can be the primary key if a method is put in to ensure there are no repeated usernames
-way for admin to view all books currently out of the library
+way for user to view all books they have reserved and have out of the library
+allow users to remove books they have reserved
+improve admin home page
+improve home page
+way for users to edit their details eg password or username
+add images of book covers to database
+change browse books page to include images and improve it - maybe make it like the school page
+add a way for admins to search for users
 
 improve search mechanism
 
